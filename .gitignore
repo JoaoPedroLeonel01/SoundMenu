@@ -1,0 +1,86 @@
+# ----- macOS -----
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.DocumentRevisions-V100
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# ----- Xcode: dados do usuário (cada dev tem os seus) -----
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+# Mantém os schemes compartilhados e o workspace do projeto
+!*.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+!*.xcodeproj/xcshareddata/
+
+# ----- Build -----
+build/
+DerivedData/
+*.xcarchive
+*.app
+*.dmg
+*.zip
+*.pkg
+
+# ----- Swift Package Manager -----
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+
+# ----- Ferramentas de dependência (caso usadas no futuro) -----
+Pods/
+Carthage/Build/
+Carthage/Checkouts/
+
+# ----- Assinatura e notarização (NUNCA versionar) -----
+*.p12
+*.cer
+*.certSigningRequest
+*.mobileprovision
+*.provisionprofile
+*.keychain
+*.keychain-db
+AuthKey_*.p8
+notarization/
+ExportOptions.plist
+
+# ----- Segredos e configs locais -----
+.env
+.env.*
+*.local.xcconfig
+Secrets.xcconfig
+
+# ----- Testes / cobertura -----
+*.xcresult
+*.profraw
+*.profdata
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
+
+# ----- Editores -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ----- Ferramentas de IA (configs locais) -----
+.claude/
