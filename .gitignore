@@ -1,62 +1,86 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+# ----- macOS -----
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.DocumentRevisions-V100
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
-## User settings
+# ----- Xcode: dados do usuário (cada dev tem os seus) -----
 xcuserdata/
-
-## Obj-C/Swift specific
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
 *.hmap
-
-## App packaging
 *.ipa
-*.dSYM.zip
 *.dSYM
+*.dSYM.zip
 
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
+# Mantém os schemes compartilhados e o workspace do projeto
+!*.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+!*.xcodeproj/xcshareddata/
 
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
+# ----- Build -----
+build/
+DerivedData/
+*.xcarchive
+*.app
+*.dmg
+*.zip
+*.pkg
 
+# ----- Swift Package Manager -----
 .build/
+.swiftpm/
+Packages/
+Package.resolved
+*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
-
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
+# ----- Ferramentas de dependência (caso usadas no futuro) -----
+Pods/
 Carthage/Build/
+Carthage/Checkouts/
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
+# ----- Assinatura e notarização (NUNCA versionar) -----
+*.p12
+*.cer
+*.certSigningRequest
+*.mobileprovision
+*.provisionprofile
+*.keychain
+*.keychain-db
+AuthKey_*.p8
+notarization/
+ExportOptions.plist
 
+# ----- Segredos e configs locais -----
+.env
+.env.*
+*.local.xcconfig
+Secrets.xcconfig
+
+# ----- Testes / cobertura -----
+*.xcresult
+*.profraw
+*.profdata
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
-fastlane/test_output
+fastlane/test_output/
+
+# ----- Editores -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ----- Ferramentas de IA (configs locais) -----
+.claude/
